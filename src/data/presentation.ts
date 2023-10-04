@@ -23,6 +23,8 @@ const presentation: Presentation = {
         {
             label: "LinkedIn",
             link: "https://www.linkedin.com/in/mahdiharish12/"
-        }
-    ]
-}
+        },
+    ],
+};
+
+export default presentation;
