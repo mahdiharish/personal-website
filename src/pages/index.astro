@@ -9,8 +9,8 @@ import Link from "../components/shared/Link.astro";
 
 import presentation from "@/data/presentation";
 import projects from "../data/projects";
-import education from "@/data/education";
-import workExperience from "@/data/experience";
+import Education from "@/components/Education.astro";
+import WorkExperience from "@/components/WorkExperience.astro";
 ---
 
 <Layout title="Welcome to my portfolio website and blog!">
@@ -33,36 +33,8 @@ import workExperience from "@/data/experience";
             class="w-64 object-contain rounded-full"
           />
         </div>
-        <div class="flex-col gap-4">
-          <h2 class="text-neutral-100 text-2xl">Education</h2>
-          {
-            education.map((edu) => (
-              <div class="flex flex-col gap-2 pt-4 pb-3 rounded-md">
-                <h3 class="text-neutral-100 text-xl font-semibold">
-                  {edu.title}
-                </h3>
-                <p class="text-neutral-100">{edu.institution}</p>
-                <p class="text-neutral-100">{edu.educationTime}</p>
-                <p class="text-neutral-100">{edu.description}</p>
-              </div>
-            ))
-          }
-        </div>
-        <div class="flex-col gap-4">
-          <h2 class="text-neutral-100 text-2xl">Work Experience</h2>
-          {
-            workExperience.map((work) => (
-              <div class="flex flex-col gap-2 pt-4 pb-3 rounded-md">
-                <h3 class="text-neutral-100 text-xl font-semibold">
-                  {work.title}
-                </h3>
-                <p class="text-neutral-100">{work.company}</p>
-                <p class="text-neutral-100">{work.workTime}</p>
-                <p class="text-neutral-100">{work.description}</p>
-              </div>
-            ))
-          }
-        </div>
+        <Education />
+        <WorkExperience />
       </div>
     </article>
   </main>
