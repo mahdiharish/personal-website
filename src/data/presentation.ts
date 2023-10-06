@@ -1,6 +1,7 @@
 type Social = {
     label: string;
     link: string;
+    image: string;
 }
 
 type Presentation = {
@@ -18,11 +19,13 @@ const presentation: Presentation = {
     socials: [
         {
             label: "GitHub",
-            link: "https://github.com/mahdiharish"
+            link: "https://github.com/mahdiharish",
+            image: "./src/assets/github.png"
         },
         {
             label: "LinkedIn",
-            link: "https://www.linkedin.com/in/mahdiharish12/"
+            link: "https://www.linkedin.com/in/mahdiharish12/",
+            image: "./src/assets/linkedin.png"
         },
     ],
 };

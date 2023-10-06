@@ -2,23 +2,27 @@
 import type { HTMLAttributes } from "astro/types";
 
 type Props = HTMLAttributes<"a"> & {
-    label?: string;
-    isUnderline? : boolean;
+  label?: string;
+  isUnderline?: boolean;
+  image?: string;
 };
 
-const { label, isUnderline, ...props } = Astro.props;
+const { label, isUnderline, image, ...props } = Astro.props;
 ---
 
 <a
-    href={props.href}
-    class:list={{
-        ["hover:text-neutral-100 cursor-pointer"]: true,
-        ["underline decoration-dashed underline-offset-8"]: isUnderline
-    }}
-    {...props}
-    rel="noreferrer"
-    target="_blank"
+  href={props.href}
+  class:list={{
+    ["hover:text-neutral-100 cursor-pointer text-center"]: true,
+    ["underline decoration-dashed underline-offset-8"]: isUnderline,
+  }}
+  {...props}
+  rel="noreferrer"
+  target="_blank"
 >
-    {label}
-    <span class="sr-only">{label} link</span>
+  <div class="flex flex-col items-center">
+    {image && <img src={image} alt={label} />}
+    {label && <span class="mt-1">{label}</span>}
+  </div>
+  <span class="sr-only">{label} link</span>
 </a>
