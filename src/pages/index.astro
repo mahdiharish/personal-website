@@ -35,6 +35,21 @@ import WorkExperience from "@/components/WorkExperience.astro";
         </div>
         <Education />
         <WorkExperience />
+        <article class="flex flex-col gap-8">
+          <header class="flex w-full flex-row justify-between gap-2">
+            <h3 class="text-lg text-neutral-100">
+              Selected projects ({projects.length})
+            </h3>
+          </header>
+          {projects.length === 0 && <p>Oops, I must work^^^^^</p>}
+
+          <section class="flex flex-col gap-4">
+            {
+              projects.length !== 0 &&
+                projects.map((project) => <ProjectCard {...project} />)
+            }
+          </section>
+        </article>
       </div>
     </article>
   </main>
