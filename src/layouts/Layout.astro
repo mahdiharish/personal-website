@@ -1,6 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import type { HeadTags } from "../utils/types/HeadTags";
+import theme from "@/data/theme";
+import BlurTheme from "@/components/shared/BlurTheme.astro";
 
 export type Props = HeadTags;
 
@@ -17,8 +19,12 @@ const HeadTags = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>Mahdi Harish's Website</title>
   </head>
-  <body class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16">
+  <body
+    class="mx-auto flex min-h-screen max-w-[872px] flex-col gap-9 bg-neutral-900 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16"
+  >
     <Header />
+    <BlurTheme position="top" color={theme.colors.blur.top} />
+    <BlurTheme position="bottom" color={theme.colors.blur.bottom} />
     <slot />
   </body>
 </html>
