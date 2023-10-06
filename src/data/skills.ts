@@ -46,7 +46,7 @@ const skill: Skill[] = [
         tech: "Astro",
         level: "Beginner",
         type: "frontend",
-        image: "./src/assets/astro.png"
+        image: "./src/assets/astro.svg"
     },
     {
         tech: "Prisma",
