@@ -19,3 +19,5 @@ const education: Education[] = [
         description: "Graduated with GPA of 3.18."
     }
 ]
+
+export default education;

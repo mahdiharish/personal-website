@@ -6,8 +6,10 @@ import ProjectCard from "../components/ProjectCard.astro";
 import SocialLinks from "@/components/SocialLink.astro";
 import Link from "../components/shared/Link.astro";
 
-import presentation from "../data/presentation";
+import presentation from "@/data/presentation";
 import projects from "../data/projects";
+import education from "@/data/education";
+import workExperience from "@/data/experience";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -32,10 +34,27 @@ import projects from "../data/projects";
         </h1>
 
         <h2
-          class="w-auto max-w-[60ch] leading-6"
+          class="w-auto max-w-[60ch] leading-6 text-neutral-100"
           set:html={presentation.description}
         />
-        <SocialLinks />
+        <div class="flex-col gap-4">
+          <h2 class="text-neutral-100 text-2xl">Education</h2>
+          {
+            education.map((edu) => (
+              <div class="flex flex-col gap-2 pt-4 pb-3 rounded-md">
+                <h3 class="text-neutral-100 text-xl font-semibold">
+                  {edu.title}
+                </h3>
+                <p class="text-neutral-100">{edu.institution}</p>
+                <p class="text-neutral-100">{edu.educationTime}</p>
+                <p class="text-neutral-100">{edu.description}</p>
+              </div>
+            ))
+          }
+        </div>
+        <div class="flex-col gap-4">
+          <h2 class="text-neutral-100 text-2xl">Work Experience</h2>
+        </div>
       </div>
     </article>
   </main>
