@@ -1,36 +1,29 @@
 ---
-import presentation from "../data/presentation";
 import removeTrailingSlash from "../utils/removeTrailingSlash";
 
 const pathname = removeTrailingSlash(Astro.url.pathname);
 ---
 
 <header class="z-40 flex w-full flex-col gap-2 md:flex-row md:justify-between">
-  <a href={`mailto:${presentation.mail}`} class="hover:text-neutral-100"
-    >{presentation.mail}</a
-  >
+  <h1>Mahdi Harish's Portfolio and Blog</h1>
   <nav role="navigation">
-    <ul>
+    <ul class="flex flex-row md:flex-row md:justify-end gap-7">
       <li>
         <a
           href="/"
           class:list={{
             ["hover:text-neutral-100"]: true,
             ["text-neutral-100"]: pathname === "/",
-          }}
+          }}>Home</a
         >
-          Home
-        </a>
       </li>
       <li>
         <a
           href="/posts"
           class:list={{
             ["hover:text-neutral-100"]: true,
-            ["text-neutral-100"]: pathname === "/",
-          }}
-        >
-          Blog Posts</a
+            ["text-neutral-100"]: pathname === "/posts",
+          }}>Posts</a
         >
       </li>
     </ul>
