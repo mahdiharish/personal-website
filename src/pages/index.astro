@@ -5,12 +5,12 @@ import portrait from "../assets/portrait.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import SocialLinks from "@/components/SocialLink.astro";
-import Link from "../components/shared/Link.astro";
 
 import presentation from "@/data/presentation";
 import projects from "../data/projects";
 import Education from "@/components/Education.astro";
 import WorkExperience from "@/components/WorkExperience.astro";
+import Skills from "@/components/Skills.astro";
 ---
 
 <Layout title="Welcome to my portfolio website and blog!">
@@ -36,6 +36,7 @@ import WorkExperience from "@/components/WorkExperience.astro";
         <SocialLinks />
         <Education />
         <WorkExperience />
+        <Skills />
         <article class="flex flex-col gap-8">
           <header class="flex w-full flex-row justify-between gap-2">
             <h3 class="text-lg text-neutral-100">
