@@ -10,67 +10,67 @@ const skill: Skill[] = [
         tech: "JavaScript",
         level: "Intermediate",
         type: "lang",
-        image: "./src/assets/javascript.png"
+        image: "https://img.icons8.com/color/96/javascript--v1.png"
     },
     {
         tech: "TypeScript",
         level: "Intermediate",
         type: "lang",
-        image: "./src/assets/typescript.png"
+        image: "https://img.icons8.com/color/96/typescript.png"
     },
     {
         tech: "React.js",
         level: "Intermediate",
         type: "frontend",
-        image: "./src/assets/react.png"
+        image: "https://img.icons8.com/officel/96/react.png"
     },
     {
         tech: "Next.js",
         level: "Intermediate",
         type: "frontend",
-        image: "./src/assets/nextjs.png"
+        image: "https://img.icons8.com/color/96/nextjs.png"
     },
     {
         tech: "NestJS",
         level: "Intermediate",
         type: "backend",
-        image: "./src/assets/nestjs.png"
+        image: "https://img.icons8.com/color/96/nestjs.png"
     },
     {
         tech: "Node.js",
         level: "Beginner",
         type: "backend",
-        image: "./src/assets/nodejs.png"
+        image: "https://img.icons8.com/fluency/48/node-js.png"
     },
     {
         tech: "Astro",
         level: "Beginner",
         type: "frontend",
-        image: "./src/assets/astro.svg"
+        image: "https://api.iconify.design/devicon/astro.svg?width=96"
     },
     {
         tech: "Prisma",
         level: "Intermediate",
         type: "backend",
-        image: "./src/assets/prisma.png"
+        image: "https://img.icons8.com/color/96/prisma-orm.png"
     },
     {
         tech: "PostgreSQL",
         level: "Intermediate",
         type: "backend",
-        image: "./src/assets/postgresql.png"
+        image: "https://img.icons8.com/color/96/postgreesql.png"
     },
     {
         tech: "PHP",
         level: "Beginner",
         type: "lang",
-        image: "./src/assets/php.png"
+        image: "https://img.icons8.com/officel/96/php-logo.png"
     },
         {
         tech: "Golang",
         level: "Beginner",
         type: "lang",
-        image: "./src/assets/golang.png"
+        image: "https://img.icons8.com/color/96/golang.png"
     },
 ]
 
