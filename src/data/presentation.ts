@@ -20,12 +20,12 @@ const presentation: Presentation = {
         {
             label: "GitHub",
             link: "https://github.com/mahdiharish",
-            image: "./src/assets/github.png"
+            image: "https://img.icons8.com/color/96/github--v1.png"
         },
         {
             label: "LinkedIn",
             link: "https://www.linkedin.com/in/mahdiharish12/",
-            image: "./src/assets/linkedin.png"
+            image: "https://img.icons8.com/color/96/linkedin.png"
         },
     ],
 };
