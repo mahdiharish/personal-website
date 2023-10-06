@@ -3,7 +3,7 @@ import project, { type Project } from "../data/projects";
 
 type Props = Project;
 
-const { title, description, techs, link } = Astro.props;
+const { title, description, role, techs, link } = Astro.props;
 
 const formatTechs = (values: string[]) =>
   values.toString().replaceAll(",", " • ");
@@ -18,7 +18,8 @@ const formatTechs = (values: string[]) =>
   >
     <div class="flex-row justify-between pt-2 pb-2 md:flex-row md:items-center">
       <p class="text-neutral-100 font-bold text-lg">{title}</p>
-      <p class="text-neutral-100 mt-2">{description}</p>
+      <p class="text-neutral-100 mt-2">Role: {role}</p>
+      <p class="text-neutral-100 mt-4">{description}</p>
       <p class="text-neutral-100 mt-4">{formatTechs(techs)}</p>
     </div>
 

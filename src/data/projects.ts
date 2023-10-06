@@ -1,6 +1,7 @@
 export type Project = {
     title: string;
     description: string;
+    role: string;
     techs: string[];
     link: string;
 }
@@ -9,6 +10,7 @@ const project: Project[] = [
     {
         title: "Curagan",
         description: "Mobile-based web app for people to make appointment with doctor for online consultation.",
+        role: "Lead project and back-end developer",
         techs: [
             "Next.js",
             "TailwindCSS",
@@ -20,8 +22,9 @@ const project: Project[] = [
     {
         title: "MARKILANG",
         description: "Auction and bidding website for hobby items.",
+        role: "Back-end and database developer",
         techs: [
-            "Next.js",
+            "Next.js App Router (Full Stack Development)",
             "TailwindCSS",
             "Railway"
         ],
@@ -30,6 +33,7 @@ const project: Project[] = [
     {
         title: "Kanban Web App",
         description: "Comprehensive task manager and to-do app website using Kanban methodology.",
+        role: "Front-end developer",
         techs: [
             "Next.js",
             "TailwindCSS",
