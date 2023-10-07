@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import portrait from "../assets/portrait.png";
+import { getCollection } from "astro:content";
 
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
@@ -12,6 +13,12 @@ import Education from "@/components/Education.astro";
 import WorkExperience from "@/components/WorkExperience.astro";
 import Skills from "@/components/Skills.astro";
 import Footer from "@/components/Footer.astro";
+import Link from "@/components/shared/Link.astro";
+import PostCard from "@/components/PostCard.astro";
+
+const posts = (await getCollection("posts")).sort(function (first, second) {
+  return second.data.publishedAt.getTime() - first.data.publishedAt.getTime();
+});
 ---
 
 <Layout title="Welcome to my portfolio website and blog!">
@@ -35,6 +42,34 @@ import Footer from "@/components/Footer.astro";
           />
         </div>
         <SocialLinks />
+        <article class="flex flex-col gap-8">
+          <header class="flex w-full flex-row justify-between gap-2">
+            <h3 class="text-lg text-neutral-100">Latest posts</h3>
+            <Link
+              href="/posts"
+              label="See all posts"
+              isUnderline
+              target="_self"
+            />
+          </header>
+          {posts.length === 0 && <p>Soon, stay connected 👀...</p>}
+
+          <section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
+            {
+              posts.length !== 0 &&
+                posts
+                  .slice(0, 2)
+                  .map((post) => (
+                    <PostCard
+                      publishedAt={post.data.publishedAt}
+                      title={post.data.title}
+                      description={post.data.description}
+                      slug={post.slug}
+                    />
+                  ))
+            }
+          </section>
+        </article>
         <Education />
         <WorkExperience />
         <Skills />
