@@ -30,16 +30,18 @@ const posts = (await getCollection("posts")).sort(function (first, second) {
         <h1 class="text-3xl text-neutral-100">
           {presentation.title}
         </h1>
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row justify-between max-md:flex-col-reverse">
           <h2
-            class="w-auto max-w-[60ch] leading-6 text-neutral-100"
+            class="w-auto max-w-[60ch] leading-6 text-neutral-100 text-justify"
             set:html={presentation.description}
           />
-          <Image
-            src={portrait}
-            alt="My profile photo"
-            class="w-64 object-contain rounded-full"
-          />
+          <div class="max-md:flex justify-center">
+            <Image
+              src={portrait}
+              alt="My profile photo"
+              class="w-64 object-contain rounded-full max-md:flex items-center mb-5"
+            />
+          </div>
         </div>
         <SocialLinks />
         <article class="flex flex-col gap-8">
