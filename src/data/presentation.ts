@@ -27,6 +27,11 @@ const presentation: Presentation = {
             link: "https://www.linkedin.com/in/mahdiharish12/",
             image: "https://img.icons8.com/color/96/linkedin.png"
         },
+        {
+            label: "CV",
+            link: "/src/assets/cv_mahdi.pdf",
+            image: "https://img.icons8.com/office/96/parse-from-clipboard.png"
+        }
     ],
 };
 
