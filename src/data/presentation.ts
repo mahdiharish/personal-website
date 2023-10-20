@@ -29,7 +29,7 @@ const presentation: Presentation = {
         },
         {
             label: "CV",
-            link: "/src/assets/cv_mahdi.pdf",
+            link: "https://raw.githubusercontent.com/mahdiharish/personal-website/main/src/assets/cv_mahdi.pdf",
             image: "https://img.icons8.com/office/96/parse-from-clipboard.png"
         }
     ],
